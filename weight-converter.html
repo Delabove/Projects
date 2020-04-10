@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/weight_converter.css">
+    <meta charset="UTF-8"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> <link rel="stylesheet" href="css/weight_converter.css">
     <title>Weight Converter</title>
-    <h1 align="center" style="color: hotpink">Weight Converter Application</h1>
-
 
 </head>
 <body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="display-4 text=center mb-3" style="color: orange">Weight Converter</h1>
+            <form>
+                <div class="form-group">
+                    <input
+                            id="lbsInput"
+                            type="number"
+                            class=" form-control form-control-lg"
+                            placeholder="Enter Pounds...."
+                    >
+                </div>
+            </form>
+
+            <div id="output">
+                <div class="card bg-primary mb-2" style="color: white">
+                    <div class="card-block">
+                        <h4>Grams:</h4>
+                        <div id="gramsOutput"></div>
+                    </div>
+                </div>
+
+
+            <div class="card bg-success mb-2" style="color: white">
+                <div class="card-block">
+                    <h4>Kilograms:</h4>
+                    <div id="kgOutput"></div>
+                </div>
+            </div>
+
+            <div class="card bg-danger mb-2" style="color: white">
+                <div class="card-block">
+                    <h4>Ounces:</h4>
+                    <div id="ozOutput"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
 <script src="js/weight-converter.js"></script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+
+    // HIDES CARDS
+    document.getElementById('output').style.visibility = 'hidden';
+
+// TARGETS THE INPUT FIELD
+    document.getElementById('lbsInput').addEventListener('input', function(e){
+       // AFTER EVENT FIRE CARDS ARE VISIBLE
+        document.getElementById('output').style.visibility = 'visible';
+        let lbs = e.target.value;
+        // console.log(lbs);
+        // WEIGHT CONVERSION OF INPUT IN GRAMS KILOGRAMS AND OUNCES
+        document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+        document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+        document.getElementById('ozOutput').innerHTML = lbs * 16;
+
+    });
+
+</script>
+
 </body>
 </html>
+
