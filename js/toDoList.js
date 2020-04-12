@@ -6,10 +6,13 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
+// const filterOption = document.querySelector('.filter-todo')
 
 // Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
+// filterOption.addEventListener('click', filterTodo);
+
 
 // Functions
 function addTodo(event) {
@@ -17,7 +20,7 @@ function addTodo(event) {
 event.preventDefault();
 
 //toDoList DIV
-const todoDiv = document.createElement('div')
+const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
 
 // create LI
@@ -25,6 +28,9 @@ const todoDiv = document.createElement('div')
     newTodo.innerText = todoInput.value;
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
+
+// ADD TO DO TO LOCAL STORAGE
+    saveLocalTodos(todoInput.value);
 
     // CHECK MARK BUTTON
     const completedButton = document.createElement('button');
@@ -70,3 +76,36 @@ function deleteCheck(e) {
 
 }
 
+//
+// function filterTodo(e) {
+// const todos = todoList.childNodes;
+// todos.forEach(function(todo) {
+//     switch(e.target.value){
+//         // case 'all':
+//         //     console.log('flexed');
+//             // todo.style.display= 'flex';
+//             // break;
+//         case "completed":
+//             if(todo.classList.contains('completed')) {
+//                 const todo = item.parentElement;
+//                 todo.display= 'flex';
+//             console.log('not flexed');
+//                 // todo.style.display= 'flex';
+//             // } else {
+//             //     todo.display= 'none';
+//             }
+//     }
+// });
+// }
+function saveLocalTodos(todo) {
+    let todos;
+    if(localStorage.getItem('todos') === null) {
+        todos = [];
+    }else{
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
+
+}
