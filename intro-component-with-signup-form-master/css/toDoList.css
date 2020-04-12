@@ -23,7 +23,7 @@ header, form{
 }
 
 form input, form button {
-    padding: 16px;
+    padding: 12px;
     font-size: 30px;
     border: none;
     background: white;
@@ -59,4 +59,86 @@ form button:hover{
      display: flex;
      justify-content: space-between;
      align-items: center;
+    transition: 0.5s ease;
  }
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn  {
+    background: #7741fd;
+    color: #f6d8eb;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.complete-btn {
+    background: royalblue ;
+    color: #f6d8eb;
+    border: none;
+    padding: 8px 8px;
+
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.todo-item {
+    padding: 2px 10px;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 70%;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #550bfd;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 0;
+    padding: 6px;
+    font-size: 12px;
+
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    /*font-size: 12px;*/
+    position: absolute;
+    background: royalblue;
+    top: 0px;
+    right: 0px;
+    /*bottom: 0px;*/
+    padding: 1px;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #550bfd;
+}
