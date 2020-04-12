@@ -1,5 +1,5 @@
 *{
-    margin; 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -23,8 +23,8 @@ header, form{
 }
 
 form input, form button {
-    padding: .5rem;
-    font-size: 2rem;
+    padding: 16px;
+    font-size: 30px;
     border: none;
     background: white;
 }
@@ -41,3 +41,22 @@ form button:hover{
     color: white;
 }
 
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+     min-width: 30%;
+     list-style: none;
+ }
+
+.todo {
+     margin: 5px;
+     background: white;
+     color: black;
+     font-size: 12px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
