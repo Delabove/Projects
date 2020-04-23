@@ -28,10 +28,14 @@
 
         body {
 
-        bacground-image: url("images/bg-intro-mobile.png");
+        background-image: url("images/bg-intro-mobile.png");
             /*height="1000" width="375"*/
         background-image: url("images/bg-intro-desktop.png");
             /*height="800" width="1412"/>*/
+        }
+
+        #terms {
+            color: red;
         }
 
     </style>
@@ -42,61 +46,90 @@
 
 
 <!--TOP/LEFT HEADING-->
-<div class="container">
-<!--  <div class="w-100">-->
-        <div class="row text-center col-sm-6 col-md-8 col-lg-6 col-xl-5 ml-3 mr-3 ">
-<!--            <div class="col-sm-6 col-md-8 col-lg-6 col-xl-5 ml-3 mr-3 pt-5 pb-3 pr-5 pl-5 text-center">-->
-              <span class="header pt-5 pr-5"><h4 class="header">Learn to code by watching others</h4></span>
+<!--    <div class="container">-->
 
-            <div class="top-p text-center pr-2">
-                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-                    but understanding how developers think is invaluable.</p>
-             </div>
+<!--            <div class="row text-center col-md-8 ml-3 mr-3 ">-->
+<!---->
+<!--                  <span class="header pt-5 pr-5"><h4 class="header">Learn to code by watching others</h4></span>-->
+<!---->
+<!--                <div class="top-p text-center pr-2">-->
+<!--                     <p>-->
+<!--                         See how experienced developers solve problems in real-time. Watching scripted tutorials is great,-->
+<!--                         but understanding how developers think is invaluable.-->
+<!--                     </p>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="row col-md-4 pl-4 pr-4 pb-3 pt-5">-->
+<!--                    <button type="button" class="btn-top btn-primary btn-lg btn-block"  style="background-color: #5d49c1; font-size: 19px"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-6"><span class="header pt-5 pr-5"><h4 class="header">Learn to code by watching others</h4></span></div>
+            <div class="col-sm-4  col-md-5 "><button type="button" class="btn-top btn-primary btn-lg btn-block"  style="background-color: #5d49c1; font-size: 19px"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button></div>
         </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>
+                    See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+                    but understanding how developers think is invaluable.
+                 </p>
+            </div>
+<!--            <div class="col-sm-6 col-md-10">-->
+                    <form>
+                        <div class="card col-sm-12 text-center" style="width: 30rem">
+                            <div class="form-group bg-white pt-5">
+    <!--                            <div class="card text-white bg-white col-sm-10 text-center" style="width: 20em;margin:0 auto;">-->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control " id="firstNameInput" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="secondNameInput" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="emailInput" placeholder="Email Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="passwordInput" placeholder="Password">
+                                    </div>
 
-<!--            7DAY BUTTON-->
-        <div class="pl-4 pr-4 pb-3 pt-5">
-            <button type="button" class="btn-top btn-primary btn-lg btn-block"  style="background-color: #5d49c1; font-size: 19px"><strong>Try it free 7 days</strong> then $20/mo. thereafter</button>
-        </div>
+                                    <span class=" col-md-12 col-lg-12 col-xl-12 pt-2"><button type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #0cc68a;">CLAIM YOUR FREE TRIAL</button></span>
+
+                                    <span style="font-size: 12px ; color: lightgrey"><p class="pt-3"> By clicking the button, you are agreeing to our <span id="terms">Terms and Services</span></p></span>
+
+                            </div>
+                        </div>
+                    </form>
+<!--        </div>-->
+    </div>
 
 
-      <form>
-          <div class="card text-white bg-white col-sm-6 col-md-8 col-lg-6 col-xl-5 text-center pt-3 pb-3" style="width: 20em;margin:0 auto;">
-                <div class="form-group" >
-        <!--          <label for="formGroupExampleInput">Example label</label>-->
-                  <span><input type="text" class="form-control " id="firstNameInput" placeholder="First Name"></span>
-                </div>
-                <div class="form-group">
-        <!--          <label for="formGroupExampleInput2">Another label</label>-->
-                  <span>≈<input type="text" class="form-control" id="secondNameInput" placeholder="Last Name"></span>
-                </div>
-                <div class="form-group" >
-                  <!--          <label for="formGroupExampleInput">Example label</label>-->
-                  <input type="text" class="form-control" id="emailInput" placeholder="Email Address">
-                </div>
-                <div class="form-group">
-                  <!--          <label for="formGroupExampleInput2">Another label</label>-->
-                  <input type="text" class="form-control" id="passwordInput" placeholder="Password">
-                </div>
-
-           <span class=" col-md-12 col-lg-12 col-xl-12 pt-2"><button type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #0cc68a;">CLAIM YOUR FREE TRIAL</button></span>
-                    <span style="font-size: 12px ; color: lightgrey"><p class="pt-3"> By clicking the button, you are agreeing to our Terms and Services</p></span>
-        </div>
-      </form>
 
 
-        </div>
-        <!--    <div class="col">col</div>-->
-        <!--    <div class="col">col</div>-->
+
+
+
+
+
+
+
+    <!--            7DAY BUTTON-->
+
+
+
+
+
 <!--    </div>-->
-</div>
+        </div>
 
 
-<p class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-</p>
-</footer>
+<!--    <p class="attribution">-->
+<!--        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.-->
+<!--        Coded by <a href="#">Your Name Here</a>.-->
+<!--    </p>-->
+<!--    </footer>-->
 
 </main>
 
