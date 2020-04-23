@@ -10,17 +10,24 @@
 <style>
 
     body {
-    );
-    }
-
-    body {
         background-image:linear-gradient(220deg, #173e80, #0aeeff, white)
     }
 
-    .container {
+    #converter {
+        border: solid 1px lightgrey;
+        border-radius: 20px;
+        box-shadow: 10px 5px 5px 5px rgba(18, 18, 18, 0.35);
+    }
+
+    .display-4 {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        font-family: Didot;
+        font-weight: bolder;
+
+    }
+
+    #lbsInput {
+        margin: 10px;
     }
 
 </style>
@@ -31,18 +38,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-4 text=center mb-3" style="color: orange">Weight Converter</h1>
+        <div class="col-md-6" id="converter">
+            <h1 class="display-4 text=center" style="color: red">Weight Converter</h1>
             <form>
 <!--                <div class="row2 col-2">-->
-                <div class="form-group">
-                    <input
-                            id="lbsInput"
-                            type="number"
-                            class=" form-control form-control-lg"
-                            placeholder="Enter Pounds...."
-                    >
-
+                <div class="row">
+                    <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds....">
                 </div>
 <!--                </div>-->
             </form>
